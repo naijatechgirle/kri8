@@ -1,0 +1,19 @@
+{
+  "name": "kri8-coming-soon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-scss --watch sass -o dist/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

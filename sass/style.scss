@@ -1,0 +1,14 @@
+$padding: 10px;
+$btn-font: 'Big Shoulders Display', cursive;
+$font-family: serif;
+$font-weight: (
+    'bold': 590,
+    'medium': 700,
+    'regular': 400
+);
+body {
+    font-family: $font-family;
+    backdrop-filter: blur(100px);
+    font-family: map-get($font-weight , regular);
+    padding: $padding;
+}
