@@ -1,7 +1,37 @@
 body {
-  font-family: serif;
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
-  font-family: 400;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 2rem;
+  font-family: verdana;
+  color: #fff;
+}
+main > section {
+  background: rgba(151, 56, 172, 0.7);
+  min-height: 68vh;
+  -webkit-backdrop-filter: blur(60px);
+          backdrop-filter: blur(60px);
+  border-radius: 16px;
+  padding: 2rem;
+}
+main .main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  text-align: center;
+}
+main .main-body > img {
+  height: 8em;
+}
+main .main-body h2 {
+  font-weight: 590;
+  font-size: 1.5em;
+}
+main .main-body button {
+  margin-top: 19.92px;
 }/*# sourceMappingURL=style.min.css.map */

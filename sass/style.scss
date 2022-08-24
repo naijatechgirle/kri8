@@ -1,14 +1,49 @@
-$padding: 10px;
+$padding: 2rem ;
 $btn-font: 'Big Shoulders Display', cursive;
-$font-family: serif;
+$text-color: #fff;
+$font-family: verdana;
 $font-weight: (
     'bold': 590,
     'medium': 700,
     'regular': 400
 );
+
 body {
-    font-family: $font-family;
-    backdrop-filter: blur(100px);
-    font-family: map-get($font-weight , regular);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
     padding: $padding;
+    font-family: $font-family;
+    color: $text-color;
+        // header > img {
+        //     height: 25px;
+        // }
+        &>section {
+            background: rgba(151, 56, 172, 0.7);
+            min-height: 68vh;
+            backdrop-filter: blur(60px);
+            border-radius: 16px;
+            padding: $padding;
+        }
+        .main-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3em;
+            text-align: center;
+                &>img {
+                    height: 8em;
+                    
+                }
+                h2 {
+                    font-weight: map-get($font-weight , bold);
+                    font-size: 1.5em;
+                }
+                button {
+                    margin-top: 19.92px;
+                }
+        }
 }
