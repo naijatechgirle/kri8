@@ -1,4 +1,4 @@
-$padding: 2rem ;
+$padding: 1.4rem 2rem ;
 $btn-font: 'Big Shoulders Display', cursive;
 $text-color: #fff;
 $timeColor: rgba(151, 56, 172, 1);
@@ -12,6 +12,11 @@ $font-weight: (
 @mixin for-mobile {
     @media (max-width: 537px){
         @content; 
+    }
+}
+@mixin for-potrait {
+    @media (min-width: 674px) {
+        @content;
     }
 }
 
@@ -29,7 +34,7 @@ main {
     }
         &>section {
             background: rgba(151, 56, 172, 0.7);
-            min-height: 65vh;
+            min-height: 63vh;
             backdrop-filter: blur(60px);
             border-radius: 16px;
             padding: $padding;
@@ -87,52 +92,98 @@ main {
                     }
                 }
         }
+    // footer {
+    //     color: $timeColor;
+    //     .timeDiv {
+    //         display: flex;
+    //         justify-content: center;
+    //         text-align: center;
+    //             li {
+    //                 list-style-type: none;
+    //                 font-size: 5em;
+    //             }
+    //             .timeDash {
+    //                 margin: 0 0.3em;
+    //                 border-radius: 10px;
+    //             }
+    //         }
+    //             h5 {
+    //                 padding: 0em 1em;
+    //                 font-size: 4em;
+    //             }
+                    
+    //     .footerText {
+    //         display: flex;
+    //         justify-content: center;
+    //         text-align: center;
+    //         margin-left: 2rem;
+    //         .daySpans {
+    //             // padding-top: 15px;
+    //             font-size: 20px;
+    //             list-style-type: none;
+    //             padding: 0 3em;
+    //         }
+    //         // .daySpans:first-child{
+    //         //     margin-left: 10px;
+    //         // }
+    //     }
+    //     // @include for-mobile {
+    //     //     .timeDiv, .footerText{
+    //     //         li{
+    //     //             font-size: 2em;
+    //     //         }
+    //     //     }  
+    //     //     .daySpans {
+    //     //         list-style-type: none;
+    //     //         padding: 0;
+    //     //     }
+    //     // }
+        
+    // }
     footer {
         color: $timeColor;
-        .timeDiv {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-                li {
-                    list-style-type: none;
-                    font-size: 5em;
-                }
+        margin-top: -1.3em;
+            .timeDiv, .footerText {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                list-style-type: none;
+                padding-left: 0;
+            }
+            .timeDiv {
+                font-size: 2.3em;
+                margin-left: 0;
                 .timeDash {
                     margin: 0 0.3em;
                     border-radius: 10px;
                 }
-            }
-                h5 {
-                    padding: 0em 1em;
-                    font-size: 4em;
+                ul{
+                    text-align: center;
                 }
-                    
-        .footerText {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            margin-left: 2rem;
-            .daySpans {
-                // padding-top: 15px;
-                font-size: 20px;
-                list-style-type: none;
-                padding: 0 3em;
             }
-            // .daySpans:first-child{
-            //     margin-left: 10px;
-            // }
+            .footerText {
+                margin-top: -2em;
+                // margin-left: 2.4em;
+                    .daySpans {
+                        font-size: 15px;
+                        padding: 0 1.1em;
+                        color: rgba(151, 56, 172, 0.5);
+                            
+                    }
+            }
+        @include for-potrait {
+            .timeDiv{
+                font-size: 3em;
+                    .timeDash {
+                        margin: 0 0.5em;
+                    }
+            }
+            .footerText {
+                margin-left: 30px;
+                .daySpans {
+                    font-size: 1.5em;
+                }
+            }
         }
-        // @include for-mobile {
-        //     .timeDiv, .footerText{
-        //         li{
-        //             font-size: 2em;
-        //         }
-        //     }  
-        //     .daySpans {
-        //         list-style-type: none;
-        //         padding: 0;
-        //     }
-        // }
-        
     }
 }

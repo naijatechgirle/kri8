@@ -5,7 +5,7 @@ body {
 }
 
 main {
-  padding: 2rem;
+  padding: 1.4rem 2rem;
   font-family: verdana;
   color: #fff;
 }
@@ -16,11 +16,11 @@ main {
 }
 main > section {
   background: rgba(151, 56, 172, 0.7);
-  min-height: 65vh;
+  min-height: 63vh;
   -webkit-backdrop-filter: blur(60px);
           backdrop-filter: blur(60px);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.4rem 2rem;
 }
 main > section header .logo {
   height: 25px;
@@ -84,32 +84,45 @@ main .main-body form button {
 }
 main footer {
   color: rgb(151, 56, 172);
+  margin-top: -1.3em;
 }
-main footer .timeDiv {
+main footer .timeDiv, main footer .footerText {
   display: flex;
   justify-content: center;
   text-align: center;
-}
-main footer .timeDiv li {
   list-style-type: none;
-  font-size: 5em;
+  padding-left: 0;
+}
+main footer .timeDiv {
+  font-size: 2.3em;
+  margin-left: 0;
 }
 main footer .timeDiv .timeDash {
   margin: 0 0.3em;
   border-radius: 10px;
 }
-main footer h5 {
-  padding: 0em 1em;
-  font-size: 4em;
+main footer .timeDiv ul {
+  text-align: center;
 }
 main footer .footerText {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-left: 2rem;
+  margin-top: -2em;
 }
 main footer .footerText .daySpans {
-  font-size: 20px;
-  list-style-type: none;
-  padding: 0 3em;
+  font-size: 15px;
+  padding: 0 1.1em;
+  color: rgba(151, 56, 172, 0.5);
+}
+@media (min-width: 674px) {
+  main footer .timeDiv {
+    font-size: 3em;
+  }
+  main footer .timeDiv .timeDash {
+    margin: 0 0.5em;
+  }
+  main footer .footerText {
+    margin-left: 30px;
+  }
+  main footer .footerText .daySpans {
+    font-size: 1.5em;
+  }
 }/*# sourceMappingURL=style.min.css.map */
