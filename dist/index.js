@@ -1,27 +1,25 @@
-let dayCount = document.getElementById('dayCount').innerText;
+let dayCount = document.getElementById('dayCount');
 let hrCount = document.getElementById('hrCount');
 let minCount = document.getElementById('minCount');
 let secCount = document.getElementById('secCount');
-console.log(dayCount);
 
-// let totCount = Number(dayCount) + 1
-// console.log(totCount);
+let newYear = new Date('November 8 2022 00:00:00').getTime();
+console.log(newYear);
+let recent = new Date().getTime();
+console.log(recent);
 
 let countDown = () => {
-    // get the current date
-    let count = new Date();
-
-    // get the current hour
-    hrCount.innerText = count.getHours();
-    // get current min
-    minCount.innerText = count.getMinutes()
-    // get current Sec
-    secCount.innerText = count.getSeconds()
-    // console.log(secCount)
+    let yearGap = newYear - recent;
+    let dayUpdate = Math.floor(yearGap / 1000 / 60 / 60 / 24);
+    // console.log(dayUpdate);
+    let hrUpdate = Math.floor(yearGap / 1000 / 60 / 60) % 24;
+    let minUpdate = Math.floor(yearGap / 1000 / 60 ) % 60;
+    let secUpdate = Math.floor(yearGap / 1000 ) % 60;
+    dayCount.innerText = dayUpdate;
+    hrCount.innerText = hrUpdate;
+    minCount.innerText = minUpdate;
+    secCount.innerText = secUpdate;
     
-}
-if(countDown){
-    dayCount.innerText = Number(dayCount) - 1
-}
-// setInterval(countDown, 1000)
-countDown()
+};
+setInterval(countDown, 1000);
+// countDown()
