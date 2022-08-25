@@ -16,7 +16,7 @@ main {
 }
 main > section {
   background: rgba(151, 56, 172, 0.7);
-  min-height: 63vh;
+  min-height: 64vh;
   -webkit-backdrop-filter: blur(60px);
           backdrop-filter: blur(60px);
   border-radius: 16px;
@@ -35,11 +35,16 @@ main .main-body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
+  margin-top: 2.5em;
   text-align: center;
 }
 main .main-body > img {
   height: 8em;
+}
+@media (max-width: 537px) {
+  main .main-body > img {
+    height: 7em;
+  }
 }
 main .main-body h2 {
   font-weight: 590;
