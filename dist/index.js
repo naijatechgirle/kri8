@@ -22,6 +22,7 @@ let countDown = () => {
     hrCount.innerText = hrUpdate;
     minCount.innerText = minUpdate;
     secCount.innerText = secUpdate;
+
     
 };
 // set timer to every 1000s
