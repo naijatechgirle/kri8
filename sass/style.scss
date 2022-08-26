@@ -29,12 +29,18 @@ main {
     padding: $padding;
     font-family: $font-family;
     color: $text-color;
+    #banner{
+        background-image: url('/dist/assets/overlay.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
     @include for-mobile{
         padding: 1rem;
     }
+        
         &>section {
-            background: rgba(151, 56, 172, 0.7);
-            min-height: 64vh;
+            min-height: 65vh;
             backdrop-filter: blur(60px);
             border-radius: 16px;
             padding: $padding;
@@ -67,6 +73,10 @@ main {
                 }
                 button {
                     margin-top: 19.92px;
+                        &:hover {
+                            background-color: rgb(255, 183, 0);
+                            transition: 1s ease-in-out;
+                        }
                 }
                 form {
                     margin-top: 10px;
@@ -96,47 +106,40 @@ main {
         }
     footer {
         color: $timeColor;
-        margin-top: -1.3em;
-            .timeDiv, .footerText {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1em;
+        .timeDash {
+            margin-top: -12px;
+            // padding: 0 5px;
+            margin-left: -2em;
+        }
+        .lastDash {
+            padding-left: 2em;
+        }
+            .countFooter {
                 display: flex;
-                justify-content: center;
-                text-align: center;
-                list-style-type: none;
-                padding-left: 0;
-            }
-            .timeDiv {
-                font-size: 2.3em;
-                margin-left: 0;
-                .timeDash {
-                    margin: 0 0.3em;
-                    border-radius: 10px;
-                }
-                ul{
-                    text-align: center;
-                }
-            }
-            .footerText {
-                margin-top: -2em;
-                // margin-left: 2.4em;
-                    .daySpans {
-                        font-size: 15px;
-                        padding: 0 1.1em;
-                        color: rgba(151, 56, 172, 0.5);
-                            
+                padding: 0 10px;
+                    .timeSpace {
+                       padding: 0 0 0 15px;  
                     }
             }
+            
         @include for-potrait {
-            .timeDiv{
-                font-size: 3em;
-                    .timeDash {
-                        margin: 0 0.5em;
-                    }
+            .timeDash {
+                margin-top: -12px;
+                margin-left: -2em;
             }
-            .footerText {
-                margin-left: 30px;
-                .daySpans {
-                    font-size: 1.5em;
-                }
+            .countFooter {
+                margin: 0 1em;
+                    h2 {
+                        font-size: 2.4em;
+                    }
+                    .timeSpace {
+                        padding: 0 0.3em;
+                        font-size: 2.4em;
+                    }
             }
         }
     }

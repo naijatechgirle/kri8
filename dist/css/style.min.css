@@ -9,14 +9,19 @@ main {
   font-family: verdana;
   color: #fff;
 }
+main #banner {
+  background-image: url("/dist/assets/overlay.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 @media (max-width: 537px) {
   main {
     padding: 1rem;
   }
 }
 main > section {
-  background: rgba(151, 56, 172, 0.7);
-  min-height: 64vh;
+  min-height: 65vh;
   -webkit-backdrop-filter: blur(60px);
           backdrop-filter: blur(60px);
   border-radius: 16px;
@@ -58,6 +63,10 @@ main .main-body h2 {
 main .main-body button {
   margin-top: 19.92px;
 }
+main .main-body button:hover {
+  background-color: rgb(255, 183, 0);
+  transition: 1s ease-in-out;
+}
 main .main-body form {
   margin-top: 10px;
 }
@@ -89,45 +98,38 @@ main .main-body form button {
 }
 main footer {
   color: rgb(151, 56, 172);
-  margin-top: -1.3em;
-}
-main footer .timeDiv, main footer .footerText {
   display: flex;
   justify-content: center;
   text-align: center;
-  list-style-type: none;
-  padding-left: 0;
+  margin-top: 1em;
 }
-main footer .timeDiv {
-  font-size: 2.3em;
-  margin-left: 0;
+main footer .timeDash {
+  margin-top: -12px;
+  margin-left: -2em;
 }
-main footer .timeDiv .timeDash {
-  margin: 0 0.3em;
-  border-radius: 10px;
+main footer .lastDash {
+  padding-left: 2em;
 }
-main footer .timeDiv ul {
-  text-align: center;
+main footer .countFooter {
+  display: flex;
+  padding: 0 10px;
 }
-main footer .footerText {
-  margin-top: -2em;
-}
-main footer .footerText .daySpans {
-  font-size: 15px;
-  padding: 0 1.1em;
-  color: rgba(151, 56, 172, 0.5);
+main footer .countFooter .timeSpace {
+  padding: 0 0 0 15px;
 }
 @media (min-width: 674px) {
-  main footer .timeDiv {
-    font-size: 3em;
+  main footer .timeDash {
+    margin-top: -12px;
+    margin-left: -2em;
   }
-  main footer .timeDiv .timeDash {
-    margin: 0 0.5em;
+  main footer .countFooter {
+    margin: 0 1em;
   }
-  main footer .footerText {
-    margin-left: 30px;
+  main footer .countFooter h2 {
+    font-size: 2.4em;
   }
-  main footer .footerText .daySpans {
-    font-size: 1.5em;
+  main footer .countFooter .timeSpace {
+    padding: 0 0.3em;
+    font-size: 2.4em;
   }
 }/*# sourceMappingURL=style.min.css.map */
