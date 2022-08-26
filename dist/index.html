@@ -12,7 +12,7 @@
 <body>
     
     <main>
-        <section>
+        <section id="banner">
             <header>
                 <img src="./assets/kri8-logo2.svg" alt="kri8 logo" class="logo">
             </header>
@@ -29,38 +29,41 @@
                         Notify Me
                     </button>
                 </form>
-                <!-- <hr> WE ARE LAUNCHING IN <hr> -->
             </section>
         </section>
         
         <footer>
-            <!-- <div class="timeDiv">
-                <h5>75 : <br/><span class="daySpans">Days</span> </h5>
-                <h5>20 : <br/><span class="daySpans">Hours</span> </h5>
-                <h5>53 : <br/><span class="daySpans">Minute</span> </h5>
-                <h5>42 <br/><span class="daySpans">Seconds</span> </h5>
-            </div> -->
-            <ul class="timeDiv">
-                <li id="dayCount">75 </li>
-
-                <li class="timeDash">:</li>
-
-                <li id="hrCount">20 </li>
-
-                <li class="timeDash">:</li>
-
-                <li id="minCount">58 </li>
-
-                <li class="timeDash">:</li>
-
-                <li id="secCount">44 </li>
-            </ul>
-            <ul class="footerText">
-                <li class="daySpans">Days</li>
-                <li class="daySpans">Hours</li>
-                <li class="daySpans">Minutes</li>
-                <li class="daySpans">Seconds</li>
-            </ul>
+            <div class="">
+                <div class="countFooter">
+                    <h2 id="dayCount">75
+                    </h2>
+                    <h2 class="timeSpace"> : </h2>
+                </div>
+                <p class="timeDash">Days</p>
+            </div>
+            <div class="">
+                <div class="countFooter">
+                    <h2 id="hrCount">75
+                    </h2>
+                    <h2 class="timeSpace"> : </h2>
+                </div>
+                <p class="timeDash">Hours</p>
+            </div>
+            <div class="">
+                <div class="countFooter">
+                    <h2 id="minCount">75
+                    </h2>
+                    <h2 class="timeSpace"> : </h2>
+                </div>
+                <p class="timeDash">Minutes</p>
+            </div>
+            <div class="">
+                <div class="countFooter">
+                    <h2 id="secCount">75
+                    </h2>
+                </div>
+                <p class="timeDash lastDash">Seconds</p>
+            </div>
         </footer>
     </main>
     <script src="./index.js"></script>
