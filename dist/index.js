@@ -18,10 +18,10 @@ let countDown = () => {
     let secUpdate = Math.floor(yearGap / 1000 ) % 60;
 
     // insert into html
-    dayCount.innerText = dayUpdate;
-    hrCount.innerText = hrUpdate;
-    minCount.innerText = minUpdate;
-    secCount.innerText = secUpdate;
+    dayCount.innerText = dayUpdate < 10 ? '0' + dayUpdate : dayUpdate;
+    hrCount.innerText = hrUpdate < 10 ? '0' + hrUpdate : hrUpdate;
+    minCount.innerText = minUpdate < 10 ? '0' + minUpdate : minUpdate;
+    secCount.innerText = secUpdate < 10 ? '0' + secUpdate : secUpdate;
 
     
 };
