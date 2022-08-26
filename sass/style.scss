@@ -1,4 +1,4 @@
-$padding: 1.4rem 2rem ;
+$padding: 1rem 2rem ;
 $btn-font: 'Big Shoulders Display', cursive;
 $text-color: #fff;
 $timeColor: rgba(151, 56, 172, 1);
@@ -16,6 +16,11 @@ $font-weight: (
 }
 @mixin for-potrait {
     @media (min-width: 674px) {
+        @content;
+    }
+}
+@mixin for-large {
+    @media (min-width: 943px) {
         @content;
     }
 }
@@ -40,7 +45,7 @@ main {
     }
         
         &>section {
-            min-height: 65vh;
+            min-height: 63vh;
             backdrop-filter: blur(60px);
             border-radius: 16px;
             padding: $padding;
@@ -104,6 +109,36 @@ main {
                     }
                 }
         }
+        .bottomDiv {
+            display: flex;
+            margin-top: 3em;
+            justify-content: center;
+            align-items: center;
+            
+                div hr {
+                    width: 5em;
+                    background-color: #fff;
+                }
+                .launchDiv {
+                    font-size: xx-small;
+                    padding: 0px 10px;
+                }
+            @include for-potrait{
+                margin-top: 6.5em;
+                    .launchDiv {
+                        font-size: small;
+                    }
+                    div hr {
+                        width: 12em;
+                    }
+            }
+            @include for-large {
+                div hr {
+                    width: 20em;
+                }
+            }
+
+        }
     footer {
         color: $timeColor;
         display: flex;
@@ -143,4 +178,5 @@ main {
             }
         }
     }
+    
 }

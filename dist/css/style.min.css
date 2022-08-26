@@ -5,7 +5,7 @@ body {
 }
 
 main {
-  padding: 1.4rem 2rem;
+  padding: 1rem 2rem;
   font-family: verdana;
   color: #fff;
 }
@@ -21,11 +21,11 @@ main #banner {
   }
 }
 main > section {
-  min-height: 65vh;
+  min-height: 63vh;
   -webkit-backdrop-filter: blur(60px);
           backdrop-filter: blur(60px);
   border-radius: 16px;
-  padding: 1.4rem 2rem;
+  padding: 1rem 2rem;
 }
 main > section header .logo {
   height: 25px;
@@ -94,6 +94,36 @@ main .main-body form button {
   main .main-body form button {
     width: 7em;
     margin-left: -9px;
+  }
+}
+main .bottomDiv {
+  display: flex;
+  margin-top: 3em;
+  justify-content: center;
+  align-items: center;
+}
+main .bottomDiv div hr {
+  width: 5em;
+  background-color: #fff;
+}
+main .bottomDiv .launchDiv {
+  font-size: xx-small;
+  padding: 0px 10px;
+}
+@media (min-width: 674px) {
+  main .bottomDiv {
+    margin-top: 6.5em;
+  }
+  main .bottomDiv .launchDiv {
+    font-size: small;
+  }
+  main .bottomDiv div hr {
+    width: 12em;
+  }
+}
+@media (min-width: 943px) {
+  main .bottomDiv div hr {
+    width: 20em;
   }
 }
 main footer {
