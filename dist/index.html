@@ -18,18 +18,18 @@
     <main>
         <section id="banner">
             <header>
-                <img src="./assets/kri8-logo2.svg" alt="kri8 logo" class="logo">
+                <img src="./assets/kri8-logo2.svg" alt="kri8 logo" class="logo animate__animated animate__bounce animate__slower">
             </header>
             <section class="main-body">
-                <img src="./assets/cut_Body.svg" alt="an image">
+                <img src="./assets/cut_Body.svg" alt="an image" class="animate__animated animate__flash animate__slow">
                 <h2>
                     We are <strong>creating</strong> something awesome for you
                 </h2>
                 <small>Be the first to know when we launch! Subscribe to our news letter today.
                 </small>
-                <form action="mailto:" method="GET">
-                    <input type="email" name="" id="email" placeholder="Email Address">
-                    <button type="submit" value="send">
+                <form action="milto:" method="GET">
+                    <input name="" id="email" placeholder="Email Address" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+                    <button type="submit" id="btn" value="send">
                         Notify Me
                     </button>
                 </form>
@@ -58,7 +58,7 @@
             </div>
             <div class="">
                 <div class="countFooter">
-                    <h2 id="hrCount">75
+                    <h2 id="hrCount" class="infinte">75
                     </h2>
                     <h2 class="timeSpace"> : </h2>
                 </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="">
                 <div class="countFooter">
-                    <h2 id="minCount">75
+                    <h2 id="minCount"">75
                     </h2>
                     <h2 class="timeSpace"> : </h2>
                 </div>
@@ -74,7 +74,7 @@
             </div>
             <div class="">
                 <div class="countFooter">
-                    <h2 id="secCount">75
+                    <h2 id="secCount" class="animate__animated animate__bounce animate__slower">75
                     </h2>
                 </div>
                 <p class="timeDash lastDash">Seconds</p>
