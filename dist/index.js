@@ -2,7 +2,8 @@ let dayCount = document.getElementById('dayCount');
 let hrCount = document.getElementById('hrCount');
 let minCount = document.getElementById('minCount');
 let secCount = document.getElementById('secCount');
-let email = document.getElementById('email');
+
+
 
 
 let countDown = () => {
@@ -28,13 +29,3 @@ let countDown = () => {
 };
 // set timer to every 1000s
 setInterval(countDown, 1000);
-
-// email validations
-const validateEmail = (email) => {
-    return String(email)
-        .toLowerCase()
-        .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-};
-validateEmail()
