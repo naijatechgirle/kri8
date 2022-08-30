@@ -15,8 +15,8 @@
 </head>
 <body>
     
-    <main>
-        <section id="banner">
+    <main id="main">
+        <section class="banner">
             <header>
                 <img src="./assets/kri8-logo2.svg" alt="kri8 logo" class="logo animate__animated animate__bounce animate__slower">
             </header>
@@ -27,9 +27,9 @@
                 </h2>
                 <small>Be the first to know when we launch! Subscribe to our news letter today.
                 </small>
-                <form action="milto:" method="GET">
-                    <input name="" id="email" placeholder="Email Address" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
-                    <button type="submit" id="btn" value="send">
+                <form action="" method="">
+                    <input name="" id="email" placeholder="Email Address" autofocus>
+                    <button type="button" id="btn" value="submit">
                         Notify Me
                     </button>
                 </form>
@@ -81,6 +81,11 @@
             </div>
         </footer>
     </main>
+    <section class="alertDiv animate__animated animate__flash animate__slow" id="showDiv">
+        <div class="alertDivContent">
+            <h1 id="alertContent">Comrade, Thanks for subscribing😎😎</h1>
+        </div>
+    </sectio>
     <script src="./index.js"></script>
 </body>
 </html>
