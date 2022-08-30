@@ -2,12 +2,16 @@ $padding: 1rem 2rem ;
 $btn-font: 'Big Shoulders Display', cursive;
 $text-color: #fff;
 $timeColor: rgba(151, 56, 172, 1);
-$font-family: verdana;
+$font-family: "SF Pro", "verdana";
 $font-weight: (
     'bold': 590,
     'medium': 700,
     'regular': 400
 );
+@font-face {
+    font-family: "SF Pro";
+    src: url(/dist/assets/sf-pro.ttf);
+}
 
 @mixin for-mobile {
     @media (max-width: 537px){
@@ -29,12 +33,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-family;
 }
 main {
     padding: $padding;
-    font-family: $font-family;
     color: $text-color;
-    #banner{
+    // display: none;
+    .banner{
         background-image: url('/dist/assets/overlay.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -178,5 +183,40 @@ main {
             }
         }
     }
-    
+}
+section.alertDiv {
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: none;
+    // min-width: 20vw;
+    // min-height: 15vh;
+        @include for-potrait {
+            left: 18%;
+        }
+        @include for-large {
+            left: 30%
+        }
+        .alertDivContent {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            border-radius: 16px;
+            line-height: 1.5; 
+            margin: auto;
+            margin: 0 10px;
+            background-image: url('/dist/assets/overlay.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            letter-spacing: 2px;
+                h1 {
+                    padding: 10px;
+                }
+            
+        }
 }

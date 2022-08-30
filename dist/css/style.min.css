@@ -1,15 +1,19 @@
+@font-face {
+  font-family: "SF Pro";
+  src: url(/dist/assets/sf-pro.ttf);
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "SF Pro", "verdana";
 }
 
 main {
   padding: 1rem 2rem;
-  font-family: verdana;
   color: #fff;
 }
-main #banner {
+main .banner {
   background-image: url("/dist/assets/overlay.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,4 +167,42 @@ main footer .countFooter .timeSpace {
     padding: 0 0.3em;
     font-size: 2.4em;
   }
+}
+
+section.alertDiv {
+  position: absolute;
+  top: 30%;
+  left: 1%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: none;
+}
+@media (min-width: 674px) {
+  section.alertDiv {
+    left: 18%;
+  }
+}
+@media (min-width: 943px) {
+  section.alertDiv {
+    left: 30%;
+  }
+}
+section.alertDiv .alertDivContent {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  border-radius: 16px;
+  line-height: 1.5;
+  margin: auto;
+  margin: 0 10px;
+  background-image: url("/dist/assets/overlay.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  letter-spacing: 2px;
+}
+section.alertDiv .alertDivContent h1 {
+  padding: 10px;
 }/*# sourceMappingURL=style.min.css.map */
