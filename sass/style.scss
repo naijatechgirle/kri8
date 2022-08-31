@@ -79,7 +79,7 @@ main {
                     font-weight: map-get($font-weight , bold);
                     font-size: 1.8em;
                     @include for-mobile {
-                        font-size: 1.3em;
+                        font-size: 1.5em;
                         line-height: 1.3;
                     }
                 }
@@ -135,12 +135,15 @@ main {
                 }
                 .launchDiv {
                     font-size: xx-small;
-                    padding: 0px 8px;
+                    padding: 0px 5px;
                         h6 {
                             font-weight: map-get($font-weight, light);
                         }
                 }
             @include for-potrait{
+                .launchDiv {
+                    padding: 0px 8px;
+                }
                 margin-top: 6.5em;
                     .launchDiv {
                         font-size: small;
