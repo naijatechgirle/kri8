@@ -79,12 +79,12 @@ main {
                     font-weight: map-get($font-weight , bold);
                     font-size: 1.8em;
                     @include for-mobile {
-                        font-size: 1.5em;
+                        font-size: 1.3em;
                     }
                 }
                 h6 {
                     font-weight: map-get($font-weight, light);
-                    margin: 0 auto;
+                    margin: 0 10px;
                     @include for-potrait{
                         font-size: 0.85em;
                     }
