@@ -11,12 +11,12 @@ let alertContent = document.getElementById('alertContent');
 
 
 let countDown = () => {
-    //get recent date
-    let newYear = new Date('November 8 2022 00:00:00').getTime();
+    //get currentDate date
+    let newDate = new Date('November 8 2022 00:00:00').getTime();
     //get current date
-    let recent = new Date().getTime();
+    let currentDate = new Date().getTime();
     // get the differnce in date
-    let yearGap = newYear - recent;
+    let yearGap = newDate - currentDate;
     
     let dayUpdate = Math.floor(yearGap / 1000 / 60 / 60 / 24);
     let hrUpdate = Math.floor(yearGap / 1000 / 60 / 60) % 24;
