@@ -62,7 +62,7 @@ main .main-body h2 {
 @media (max-width: 537px) {
   main .main-body h2 {
     font-size: 1.5em;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 }
 main .main-body h6 {
