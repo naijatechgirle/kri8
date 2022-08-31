@@ -64,4 +64,5 @@ let checkEmail = () => {
         setTimeout(autoRefresh, 2000); 
     }
 }
+//added event listener
 btn.addEventListener('click', checkEmail);
