@@ -6,7 +6,8 @@ $font-family: "SF Pro", "verdana";
 $font-weight: (
     'bold': 590,
     'medium': 700,
-    'regular': 400
+    'regular': 400,
+    'light': 100
 );
 @font-face {
     font-family: "SF Pro";
@@ -81,6 +82,13 @@ main {
                         font-size: 1.5em;
                     }
                 }
+                h6 {
+                    font-weight: map-get($font-weight, light);
+                    margin: 0 auto;
+                    @include for-potrait{
+                        font-size: 0.85em;
+                    }
+                }
                 button {
                     margin-top: 19.92px;
                         &:hover {
@@ -126,7 +134,10 @@ main {
                 }
                 .launchDiv {
                     font-size: xx-small;
-                    padding: 0px 10px;
+                    padding: 0px 8px;
+                        h6 {
+                            font-weight: map-get($font-weight, light);
+                        }
                 }
             @include for-potrait{
                 margin-top: 6.5em;
