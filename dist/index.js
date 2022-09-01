@@ -64,7 +64,6 @@ let checkEmail = () => {
             showAlertDiv.style.display = 'block';
             alertContent.innerText = 'Wrong email format 😐😐';
             alertContent.style.padding = '10px 20px';
-            sectionAlertDiv.style.left = '35%'
         }
         setTimeout(alertDiv, 1000);
         //delay after alertDiv
