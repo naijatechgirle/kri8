@@ -6,7 +6,7 @@ let email = document.getElementById('email');
 let main = document.getElementById('main');
 let showAlertDiv = document.getElementById('showDiv');
 let alertContent = document.getElementById('alertContent');
-
+let sectionAlertDiv = document.querySelector('.alertDiv')
 
 
 
@@ -25,14 +25,20 @@ let countDown = () => {
 
     // insert into html
     dayCount.innerText = dayUpdate < 10 ? '0' + dayUpdate : dayUpdate;
-    hrCount.innerText = hrUpdate < 10 ? '0' + hrUpdate : hrUpdate;
-    minCount.innerText = minUpdate < 10 ? '0' + minUpdate : minUpdate;
-    secCount.innerText = secUpdate < 10 ? '0' + secUpdate : secUpdate;
 
+    hrCount.innerText = hrUpdate < 10 ? '0' + hrUpdate : hrUpdate;
+
+    minCount.innerText = minUpdate < 10 ? '0' + minUpdate : minUpdate;
+
+    secCount.innerText = secUpdate < 10 ? '0' + secUpdate : secUpdate;   
     
+    if(dayCount.innerText == 00 && hrCount.innerText == 00 && minCount.innerText == 08 && secCount == 00){
+        // clear setInterval after newDate is reached
+        clearInterval(countDownInterval);
+    }
 };
 // set timer to every 1000s
-setInterval(countDown, 1000);
+let countDownInterval = setInterval(countDown, 1000);
 
 
 let checkEmail = () => {
@@ -58,6 +64,7 @@ let checkEmail = () => {
             showAlertDiv.style.display = 'block';
             alertContent.innerText = 'Wrong email format 😐😐';
             alertContent.style.padding = '10px 20px';
+            sectionAlertDiv.style.left = '35%'
         }
         setTimeout(alertDiv, 1000);
         //delay after alertDiv
