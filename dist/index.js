@@ -24,15 +24,28 @@ let countDown = () => {
     let secUpdate = Math.floor(yearGap / 1000 ) % 60;
 
     // insert into html
-    dayCount.innerText = dayUpdate < 10 ? '0' + dayUpdate : dayUpdate;
 
-    hrCount.innerText = hrUpdate < 10 ? '0' + hrUpdate : hrUpdate;
-
-    minCount.innerText = minUpdate < 10 ? '0' + minUpdate : minUpdate;
-
-    secCount.innerText = secUpdate < 10 ? '0' + secUpdate : secUpdate;   
     
-    if(dayCount.innerText == 00 && hrCount.innerText == 00 && minCount.innerText == 08 && secCount == 00){
+    
+    
+    dayCount.innerText = dayUpdate < 10 ? '0' + dayUpdate : dayUpdate;
+    
+    hrCount.innerText = hrUpdate < 10 ? hrCount.innerText.padStart(2, '0') : hrUpdate;
+    // hrCount.innerText = hrUpdate < 10 ? '0' + hrUpdate : hrUpdate;
+    
+    minCount.innerText = minUpdate < 10 ? '0' + minUpdate : minUpdate;
+    
+    secCount.innerText = secUpdate < 10 ? '0' + secUpdate : secUpdate; 
+    
+    // console.log(hrUpdate);
+    
+    
+    // console.log(dayUpdate.padStart(2, '0'));
+    console.log(hrCount.innerText = hrUpdate > 10 ? hrCount.innerText.padStart(2, '0') : hrUpdate);
+    
+
+
+    if(dayCount.innerText == 00 && hrCount.innerText == 00 && minCount.innerText == 08 && secCount == 00) {
         // clear setInterval after newDate is reached
         clearInterval(countDownInterval);
     }
@@ -40,7 +53,12 @@ let countDown = () => {
 // set timer to every 1000s
 let countDownInterval = setInterval(countDown, 1000);
 
+// const str1 = '5';
+// console.log(dayCount.padStart(2, '0'));
+// console.log(hrCount.innerText.padStart(2, '0'));
 
+
+// email authentication
 let checkEmail = () => {
     //email regex
     let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -53,6 +71,7 @@ let checkEmail = () => {
     if(email.value.match(emailCheck)){
         main.style.display = 'none';
         let fadeDiv=()=> {
+            // displays alertDiv
             showAlertDiv.style.display = 'block';
         }
         setTimeout(fadeDiv, 1000);
@@ -62,6 +81,7 @@ let checkEmail = () => {
         let alertDiv =()=>{
             main.style.display = 'none';
             showAlertDiv.style.display = 'block';
+            // displays alertDiv and changes innerText
             alertContent.innerText = 'Wrong email format 😐😐';
             alertContent.style.padding = '10px 20px';
         }
