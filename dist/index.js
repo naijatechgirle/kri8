@@ -9,7 +9,7 @@ let alertContent = document.getElementById('alertContent');
 
 let countDown = () => {
     //get currentDate date
-    let newDate = new Date('November 8 2022 00:00:00').getTime();
+    let newDate = new Date('November 8 2025 00:00:00').getTime();
     //get current date
     let currentDate = new Date().getTime();
     // get the differnce in date
